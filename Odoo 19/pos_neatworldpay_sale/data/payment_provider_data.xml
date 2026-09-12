@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_method_neatworldpaypos" model="payment.method">
+        <field name="name">Worldpay Sales POS</field>
+        <field name="code">neatworldpaypos</field>
+        <field name="image" type="base64"
+            file="pos_neatworldpay_sale/static/description/icon.png"/>
+    </record>
+
+    <record id="payment_provider_neatworldpaypos" model="payment.provider">
+        <field name="code">neatworldpaypos</field>
+        <field name="name">Worldpay Sales POS</field>
+        <field name="state">test</field>
+        <field name="is_published">False</field>
+        <field name="allow_tokenization">False</field>
+        <field name="image_128" type="base64"
+            file="pos_neatworldpay_sale/static/description/icon.png"/>
+        <field name="module_id" ref="base.module_pos_neatworldpay_sale"/>
+        <field name="payment_method_ids"
+                eval="[Command.set([ref('payment_method_neatworldpaypos')])]"/>
+    </record>
+
+</odoo>

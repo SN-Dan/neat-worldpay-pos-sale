@@ -1,0 +1,50 @@
+.worldpay-terminal-processing {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.worldpay-terminal-processing .o_field_widget,
+.worldpay-terminal-processing .o_field_html,
+.worldpay-terminal-processing .o_wrap_field {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.worldpay-terminal-iframe-wrap {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.worldpay-terminal-iframe,
+.worldpay-terminal-processing iframe,
+.worldpay-terminal-iframe-wrap iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 0;
+    min-height: 360px;
+}
+
+.modal-dialog.worldpay-terminal-dialog {
+    width: 520px;
+    max-width: calc(100vw - 1rem);
+}
+
+@media (max-width: 576px) {
+    .modal-dialog.worldpay-terminal-dialog {
+        width: calc(100vw - 1rem) !important;
+        max-width: calc(100vw - 1rem) !important;
+        margin: 0.5rem auto !important;
+    }
+
+    .worldpay-terminal-iframe,
+    .worldpay-terminal-processing iframe,
+    .worldpay-terminal-iframe-wrap iframe {
+        min-height: 280px;
+    }
+}
